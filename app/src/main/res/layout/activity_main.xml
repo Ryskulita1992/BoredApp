@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/colorLightLilac"
+    tools:context=".presenter.main.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:cardBackgroundColor="@color/colorLilac"
+            app:cardCornerRadius="32dp"
+            app:layout_constraintTop_toTopOf="parent" />
+    </FrameLayout>
+
+
+    <ImageView
+        style="@style/BothWrapContent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/ic_favorite"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textViewCategory"
+        style="@style/CategoryStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="140dp"
+        android:text="@string/category"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewExplore"
+        style="@style/TextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/explore"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCategory" />
+
+    <TextView
+        android:id="@+id/textViewPayment"
+        style="@style/TextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="90dp"
+        android:text="@string/paymentType"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewExplore" />
+
+    <TextView
+        android:id="@+id/textViewPrice"
+        style="@style/TextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/price"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewPayment" />
+
+    <ImageView
+        android:layout_width="27dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="175dp"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/ic_money_bag"
+        app:layout_constraintLeft_toRightOf="@+id/textViewPrice"
+        app:layout_constraintRight_toLeftOf="@+id/ic_person"
+        app:layout_constraintTop_toTopOf="@+id/textViewExplore" />
+
+    <TextView
+        android:id="@+id/textViewParticipants"
+        style="@style/TextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/participants"
+        app:layout_constraintLeft_toLeftOf="@+id/textViewPrice"
+        app:layout_constraintTop_toTopOf="@+id/ic_two_person" />
+
+
+    <ImageView
+        android:id="@+id/ic_person"
+        style="@style/BothWrapContent"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/ic_one_user"
+        app:layout_constraintLeft_toLeftOf="@+id/textViewPayment"
+        app:layout_constraintTop_toBottomOf="@+id/textViewExplore" />
+
+    <ImageView
+        android:id="@+id/ic_two_person"
+        style="@style/BothWrapContent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/ic_two_users"
+        app:layout_constraintLeft_toLeftOf="@+id/ic_person"
+        app:layout_constraintTop_toBottomOf="@+id/textViewExplore" />
+
+    <ImageView
+        android:id="@+id/ic_three_persons"
+        style="@style/BothWrapContent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/ic_three_persons"
+        app:layout_constraintLeft_toRightOf="@+id/ic_two_person"
+        app:layout_constraintTop_toBottomOf="@+id/textViewExplore"
+        />
+    <ImageView
+        android:id="@+id/ic_four_persons"
+        style="@style/BothWrapContent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/ic_four_persons"
+        app:layout_constraintLeft_toRightOf="@+id/ic_three_persons"
+        app:layout_constraintTop_toBottomOf="@+id/textViewExplore" />
+    <ProgressBar
+        android:layout_width="100dp"
+        android:layout_height="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewAccessibility"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="10dp"
+        android:progressDrawable="@drawable/progressbar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:progress="100"/>
+
+    />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        style="@style/TextViewStyle"
+        android:id="@+id/textViewAccessibility"
+        android:text="@string/accessibility"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="115dp"
+        app:layout_constraintLeft_toRightOf="@+id/textViewParticipants"
+        app:layout_constraintTop_toBottomOf="@+id/textViewExplore"
+        app:layout_goneMarginLeft="20dp"/>
+
+
+
+    <Button
+        android:id="@+id/next_main"
+        style="@style/TextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/background_grad"
+        android:text="@string/next"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/container" />
+
+    <Spinner
+        android:id="@+id/types_spinner"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@drawable/spinner_background"
+        app:layout_constraintTop_toBottomOf="@+id/next_main" />
+
+    <TextView
+        android:id="@+id/textViewRangeBar"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="240dp"
+        android:text="@string/rangeBar"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <me.bendik.simplerangeview.SimpleRangeView
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="180dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="10dp"
+        android:id="@+id/rangeBar1"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        app:count="101"
+        app:movable="true"
+        app:fixedThumbRadius="5dp"
+        app:activeThumbRadius="7dp"
+        app:activeLineColor="@color/colorLilac"
+        app:fixedThumbColor="@color/colorLightPink"
+        app:activeThumbColor="@color/colorLilac"
+        app:showTicks="false"
+        app:showFixedTicks="false"
+        app:showActiveTicks="false"
+        />
+    <TextView
+        android:id="@+id/textViewRangeBar2"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="130dp"
+        android:text="@string/rangeBar"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <me.bendik.simplerangeview.SimpleRangeView
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="10dp"
+        android:id="@+id/rangeBar2"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        app:count="101"
+        app:movable="true"
+        app:fixedThumbRadius="5dp"
+        app:activeThumbRadius="7dp"
+        app:activeLineColor="@color/colorLilac"
+        app:fixedThumbColor="@color/colorLightPink"
+        app:activeThumbColor="@color/colorLilac"
+        app:showTicks="false"
+        app:showFixedTicks="false"
+        app:showActiveTicks="false"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

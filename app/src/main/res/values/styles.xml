@@ -1,0 +1,49 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="CategoryStyle">
+    <item name="android:background">@drawable/edit_rounded</item>
+    <item name="android:layout_marginTop">5dp</item>
+    <item name="android:textColor">@color/colorWhite</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:padding">12dp</item>
+</style>
+    <style name="TextViewStyle">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <style name="ConstraintRight">
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+        <item name="android:layout_marginRight">190dp</item>
+        <item name="android:layout_marginTop">40dp</item>
+    </style>
+
+    <style name="BothWrapContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="spinnerColor">
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>
