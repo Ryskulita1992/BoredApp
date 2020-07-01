@@ -5,12 +5,15 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.airbnb.lottie.LottieAnimationView;
+
 import kg.geektech.todo.R;
 import kg.geektech.todo.data.abstractActivityAndFrag.BaseFragment;
 
 public class IntraFragment extends BaseFragment {
-
-    public static final String ARG_POSITION = "position";   //
+    LottieAnimationView lottie;
+    public static final String ARG_POSITION = "position";
 
     public static Fragment newInstance(int position) {
         Bundle bundle = new Bundle();
@@ -22,13 +25,12 @@ public class IntraFragment extends BaseFragment {
     }
 
     public IntraFragment() {
-        // Required empty public constructor
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setIntroSharedPref(introSharedPref);
+
     }
 
     @Override
@@ -43,10 +45,13 @@ public class IntraFragment extends BaseFragment {
         int position = getArguments().getInt(ARG_POSITION);
         switch (position) {
             case 0:
+               lottie.setAnimation(R.raw.first);
                 break;
             case 1:
-                //break;
+                lottie.setAnimation(R.raw.second);
+                break;
             case 2:
+                lottie.setAnimation(R.raw.third);
                 break;
 
         }

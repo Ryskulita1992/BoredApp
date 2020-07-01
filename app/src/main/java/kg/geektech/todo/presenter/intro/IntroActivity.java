@@ -15,7 +15,6 @@ import kg.geektech.todo.data.abstractActivityAndFrag.BaseActivity;
 import kg.geektech.todo.presenter.main.MainActivity;
 
 public class IntroActivity extends BaseActivity {
-    AppPreferences appPreferences;
     ViewPager viewPager;
     Button skip, nextbtn;
     String start, next ;

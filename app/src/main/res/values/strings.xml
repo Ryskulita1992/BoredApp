@@ -10,11 +10,17 @@
     <string name="rangeBar">1-100</string>
     <string name="accessibility">Accessibility</string>
 
-    <string-array
-        name="types">
-        <item>types</item>
-        <item>easy</item>
-        <item>middle</item>
-        <item>difficult</item>
+    <string-array name="types">
+        <item>all</item>
+        <item>education</item>
+        <item>recreational</item>
+        <item>social</item>
+        <item>diy</item>
+        <item>charity</item>
+        <item>cooking</item>
+        <item>relaxation</item>
+        <item>music</item>
+        <item>busywork</item>
+
     </string-array>
 </resources>
