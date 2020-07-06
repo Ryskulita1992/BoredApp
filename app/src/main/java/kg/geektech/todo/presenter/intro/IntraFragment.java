@@ -42,6 +42,7 @@ public class IntraFragment extends BaseFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        assert getArguments() != null;
         int position = getArguments().getInt(ARG_POSITION);
         switch (position) {
             case 0:

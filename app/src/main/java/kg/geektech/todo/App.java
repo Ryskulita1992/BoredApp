@@ -10,6 +10,8 @@ public class App extends Application {
     public static BoredApiClient boredApiClient;
 
 
+
+
     @Override
     public void onCreate() {
         super.onCreate();

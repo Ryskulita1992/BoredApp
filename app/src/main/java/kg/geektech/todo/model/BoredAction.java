@@ -16,33 +16,20 @@ public  class BoredAction{
     private Integer participants;
 
     @SerializedName("price")
-    private Double price;
+    private Float price;
 
     @SerializedName("accessibility")
-    private String accessibility;
+    private Float accessibility;
 
-    @SerializedName("minAccessibility")
-    private Double minAccessibility;
 
-    @SerializedName("maxAccessibility")
-    private Double maxAccessibility;
 
-    @SerializedName("minprice")
-    private Double minPrice;
-    @SerializedName("maxprice")
-    private Double maxPrice;
-
-    public BoredAction(String activity, String type, String key, Integer participants, Double price, String link, String accessibility, Double minAccessibility, Double maxAccessibility, Double minPrice, Double maxPrice) {
+    public BoredAction(String activity, String type, String key, Integer participants, Double price, String link, Float accessibility, Double minAccessibility, Double maxAccessibility, Double minPrice, Double maxPrice) {
         this.activity = activity;
         this.type = type;
         this.key = key;
         this.participants = participants;
-        this.price = price;
         this.accessibility = accessibility;
-        this.minAccessibility = minAccessibility;
-        this.maxAccessibility = maxAccessibility;
-        this.minPrice = minPrice;
-        this.maxPrice = maxPrice;
+
     }
 
     public String getActivity() {
@@ -77,61 +64,26 @@ public  class BoredAction{
         this.participants = participants;
     }
 
-    public Double getPrice() {
+    public Float getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(Float price) {
         this.price = price;
     }
 
-
-
-    public String getAccessibility() {
+    public Float getAccessibility() {
         return accessibility;
     }
 
-    public void setAccessibility(String accessibility) {
+    public void setAccessibility(Float accessibility) {
         this.accessibility = accessibility;
-    }
-
-    public Double getMinAccessibility() {
-        return minAccessibility;
-    }
-
-    public void setMinAccessibility(Double minAccessibility) {
-        this.minAccessibility = minAccessibility;
-    }
-
-    public Double getMaxAccessibility() {
-        return maxAccessibility;
-    }
-
-    public void setMaxAccessibility(Double maxAccessibility) {
-        this.maxAccessibility = maxAccessibility;
-    }
-
-    public Double getMinPrice() {
-        return minPrice;
-    }
-
-    public void setMinPrice(Double minPrice) {
-        this.minPrice = minPrice;
-    }
-
-    public Double getMaxPrice() {
-        return maxPrice;
-    }
-
-    public void setMaxPrice(Double maxPrice) {
-        this.maxPrice = maxPrice;
     }
 
     @Override
     public  String toString(){
         return  "BoredAction{" + "key=" +key + ",activity=" + activity +",type=" + ",participants=" +participants+
-                ",price=" +price + ",link="  +",accessibility="+accessibility +  "minAccessibility=" + minAccessibility
-                + "maxAccessibility=" + minAccessibility + "minprice=" +minPrice + "maxPrice" + maxPrice +"}";
+                ",price=" +price + ",link="  +",accessibility="+accessibility  +"}";
 
     }
 }

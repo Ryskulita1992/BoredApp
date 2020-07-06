@@ -1,4 +1,5 @@
 package kg.geektech.todo.presenter.intro;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -28,7 +29,9 @@ public class IntroActivity extends BaseActivity {
         initViews();
         onViewPager();
     }
-
+    public static void start(Context context) {
+        context.startActivity(new Intent(context, IntroActivity.class));
+    }
     public void initViews(){
         skip = findViewById(R.id.skip_button);
         nextbtn = findViewById(R.id.next_button);

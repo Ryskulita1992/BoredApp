@@ -16,15 +16,13 @@ public class BoredApiClient {
 
     BoredApi client = retrofit.create(BoredApi.class);
 
-    public void getAction(String type, Integer participants, Double price, Double maxPrice, Double minPrice, Double accessibility,
-                          Double minAccessibility, Double maxAccessibility, BoredActionCallback callback) {
+    public void getAction(String type, Integer participants, Float price, Float maxPrice, Float minPrice, Float accessibility,
+                          Float minAccessibility, Float maxAccessibility, BoredActionCallback callback) {
 
         Call<BoredAction> call = client.getAction(
-                type, participants,
-                price,
+                type,
                 maxPrice,
                 minPrice,
-                accessibility,
                 minAccessibility,
                 maxAccessibility
         );
@@ -63,13 +61,10 @@ public interface BoredActionCallback extends BaseCallback <BoredAction>{}
         @GET("/api/activity/")
         Call<BoredAction> getAction(
                 @Query("type") String type,
-                @Query("participants") Integer participants,
-                @Query("price") Double price,
-                @Query("minprice") Double minPrice,
-                @Query("maxprice") Double maxPrice,
-                @Query("accessibility") Double accessibility,
-                @Query("minaccessibility") Double minAccessibility,
-                @Query("maxaccessibility") Double maxAccessibility
+                @Query("minprice") Float minPrice,
+                @Query("maxprice") Float maxPrice,
+                @Query("minaccessibility") Float minAccessibility,
+                @Query("maxaccessibility") Float maxAccessibility
         );
 
     }

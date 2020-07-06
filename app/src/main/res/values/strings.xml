@@ -18,7 +18,6 @@
     </array>
 
     <string-array name="types">
-        <item>all</item>
         <item>education</item>
         <item>recreational</item>
         <item>social</item>
