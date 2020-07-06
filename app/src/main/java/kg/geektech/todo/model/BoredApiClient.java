@@ -1,7 +1,5 @@
 package kg.geektech.todo.model;
-
 import android.util.Log;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -52,9 +50,9 @@ public class BoredApiClient {
             }
         });
     }
-
-    public interface BoredActionCallback {
-        void onSuccess(BoredAction boredAction);
+public interface BoredActionCallback extends BaseCallback <BoredAction>{}
+    public interface BaseCallback <A> {
+        void onSuccess(A result);
 
         void onFailure(Exception exception);
 

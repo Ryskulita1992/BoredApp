@@ -7,8 +7,15 @@
     <string name="price">price</string>
     <string name="participants">Participants</string>
     <string name="next">NEXT</string>
-    <string name="rangeBar">1-100</string>
+    <string name="rangeBar">0.0-1.0</string>
     <string name="accessibility">Accessibility</string>
+    <string name="favorites">Favorites</string>
+    <string name="home">Home</string>
+
+    <array name="rangeBarValue">
+        <item>0.35</item>
+        <item>0.85</item>
+    </array>
 
     <string-array name="types">
         <item>all</item>

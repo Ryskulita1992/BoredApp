@@ -1,10 +1,7 @@
 package kg.geektech.todo.model;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.gson.annotations.SerializedName;
-
-public class BoredAction {
+public  class BoredAction{
 
     @SerializedName("activity")
     private String activity;
@@ -21,31 +18,31 @@ public class BoredAction {
     @SerializedName("price")
     private Double price;
 
-    @SerializedName("link")
-    private String link;
-
     @SerializedName("accessibility")
     private String accessibility;
 
+    @SerializedName("minAccessibility")
+    private Double minAccessibility;
+
+    @SerializedName("maxAccessibility")
+    private Double maxAccessibility;
+
     @SerializedName("minprice")
     private Double minPrice;
-
     @SerializedName("maxprice")
     private Double maxPrice;
 
-
-
-    public BoredAction(String activity, String type, String key, Integer participants, Double price, String link, String accessibility, Double minPrice, Double maxPrice) {
-        this.minPrice = minPrice;
-        this.maxPrice = maxPrice;
+    public BoredAction(String activity, String type, String key, Integer participants, Double price, String link, String accessibility, Double minAccessibility, Double maxAccessibility, Double minPrice, Double maxPrice) {
         this.activity = activity;
         this.type = type;
         this.key = key;
         this.participants = participants;
         this.price = price;
-        this.link = link;
         this.accessibility = accessibility;
-
+        this.minAccessibility = minAccessibility;
+        this.maxAccessibility = maxAccessibility;
+        this.minPrice = minPrice;
+        this.maxPrice = maxPrice;
     }
 
     public String getActivity() {
@@ -88,13 +85,7 @@ public class BoredAction {
         this.price = price;
     }
 
-    public String getLink() {
-        return link;
-    }
 
-    public void setLink(String link) {
-        this.link = link;
-    }
 
     public String getAccessibility() {
         return accessibility;
@@ -104,10 +95,43 @@ public class BoredAction {
         this.accessibility = accessibility;
     }
 
+    public Double getMinAccessibility() {
+        return minAccessibility;
+    }
+
+    public void setMinAccessibility(Double minAccessibility) {
+        this.minAccessibility = minAccessibility;
+    }
+
+    public Double getMaxAccessibility() {
+        return maxAccessibility;
+    }
+
+    public void setMaxAccessibility(Double maxAccessibility) {
+        this.maxAccessibility = maxAccessibility;
+    }
+
+    public Double getMinPrice() {
+        return minPrice;
+    }
+
+    public void setMinPrice(Double minPrice) {
+        this.minPrice = minPrice;
+    }
+
+    public Double getMaxPrice() {
+        return maxPrice;
+    }
+
+    public void setMaxPrice(Double maxPrice) {
+        this.maxPrice = maxPrice;
+    }
+
     @Override
     public  String toString(){
         return  "BoredAction{" + "key=" +key + ",activity=" + activity +",type=" + ",participants=" +participants+
-                ",price=" +price + ",link=" +link +",accessibility="+accessibility + "}";
+                ",price=" +price + ",link="  +",accessibility="+accessibility +  "minAccessibility=" + minAccessibility
+                + "maxAccessibility=" + minAccessibility + "minprice=" +minPrice + "maxPrice" + maxPrice +"}";
 
     }
 }
