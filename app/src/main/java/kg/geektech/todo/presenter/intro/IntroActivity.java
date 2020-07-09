@@ -5,14 +5,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 import kg.geektech.todo.R;
-import kg.geektech.todo.data.database.AppPreferences;
 import kg.geektech.todo.data.abstractActivityAndFrag.BaseActivity;
+import kg.geektech.todo.data.database.AppPreferences;
+import kg.geektech.todo.presenter.home.HomeActivity;
 import kg.geektech.todo.presenter.main.MainActivity;
 
 public class IntroActivity extends BaseActivity {
@@ -55,7 +57,7 @@ public class IntroActivity extends BaseActivity {
 
     public void skip(View view) {
         new AppPreferences(IntroActivity.this).setLaunched(true);
-        startActivity(new Intent(this, MainActivity.class));
+        startActivity(new Intent(this, HomeActivity.class));
         finish();
         toast("skip button");
     }
@@ -64,7 +66,7 @@ public class IntroActivity extends BaseActivity {
         if (viewPager.getCurrentItem() <IntroPagerAdapter.NUM_ITEMS ) {
             viewPager.setCurrentItem(viewPager.getCurrentItem() + 1, true);
         } else {
-            MainActivity.start(this);
+            HomeActivity.start(this);
             finish();
         }
     }

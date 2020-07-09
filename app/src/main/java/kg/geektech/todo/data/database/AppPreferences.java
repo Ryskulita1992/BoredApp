@@ -3,10 +3,13 @@ package kg.geektech.todo.data.database;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import java.security.PublicKey;
+
 public class AppPreferences {
     private SharedPreferences preferences;
     private final static String PREF_IS_FIRST_LAUNCH= "is_first_launch";
     private final static String PREF_NAME= "bored_app_pref";
+    public final static String KEY_NIGHT_MODE= "isNightMode";
 
 
     public AppPreferences(Context context) {
@@ -21,6 +24,16 @@ public class AppPreferences {
         preferences.edit().putBoolean( PREF_IS_FIRST_LAUNCH, bool).apply();
 
     }
+
+    public void nightMode(Boolean nightMode) {
+        preferences.edit().putBoolean( KEY_NIGHT_MODE, nightMode).apply();
+
+    }
+
+    public boolean isNightModeSelected(){
+        return preferences.getBoolean( KEY_NIGHT_MODE , true);
+    }
+
 }
 
 

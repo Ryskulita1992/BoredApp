@@ -11,6 +11,10 @@
     <string name="accessibility">Accessibility</string>
     <string name="favorites">Favorites</string>
     <string name="home">Home</string>
+    <string name="night">night</string>
+    <string name="day">day</string>
+    <string name="todo">TODO</string>
+    <string name="text">Light Mode</string>
 
     <array name="rangeBarValue">
         <item>0.35</item>
@@ -21,7 +25,7 @@
         <item>education</item>
         <item>recreational</item>
         <item>social</item>
-        <item>diy</item>
+        <item>DIY</item>
         <item>charity</item>
         <item>cooking</item>
         <item>relaxation</item>

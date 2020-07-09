@@ -1,11 +1,15 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar.Bridge">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar.Bridge">
+        <item name="android:windowBackground">@color/colorGrey</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+
+
+
     </style>
+        <!-- Customize your theme here. -->
+
+
 
     <style name="CategoryStyle">
     <item name="android:background">@drawable/edit_rounded</item>

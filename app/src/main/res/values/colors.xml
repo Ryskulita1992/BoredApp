@@ -6,8 +6,6 @@
 
 
 
-    <color name="colorGrey">#666568</color>
-    <color name="colorYellow">#DFBB67</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlue">#5B72FB</color>
     <color name="colorPink">#fc6767</color>
@@ -16,8 +14,14 @@
     <color name="colorLightPink">#C57D97</color>
     <color name="colorPin">#D81B60</color>
     <color name="colorMaroon">#710C31</color>
+    <color name="colorLightLilac">#9663FD</color>
     <color name="colorDarkMaroon">#4A0A21</color>
-    <color name="colorLightLilac">#C3D3BEFF</color>
+
+    <color name="colorLightGreyNight">#A2A1A5</color>
+    <color name="colorGrey">#4B4A4C</color>
+    <color name="textColorDark">#141017</color>
+
+
 
 
 

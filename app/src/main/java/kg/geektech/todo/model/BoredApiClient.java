@@ -55,9 +55,7 @@ public interface BoredActionCallback extends BaseCallback <BoredAction>{}
         void onFailure(Exception exception);
 
     }
-
-
-    public interface BoredApi {
+    private interface BoredApi {
         @GET("/api/activity/")
         Call<BoredAction> getAction(
                 @Query("type") String type,
