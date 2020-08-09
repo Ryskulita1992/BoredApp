@@ -15,10 +15,13 @@
     <string name="day">day</string>
     <string name="todo">TODO</string>
     <string name="text">Light Mode</string>
+    <string name="Settings">settings</string>
+    <string name="Category">Category</string>
+    <string name="Price">Price</string>
 
     <array name="rangeBarValue">
-        <item>0.35</item>
-        <item>0.85</item>
+        <item>0.10</item>
+        <item>0.50</item>
     </array>
 
     <string-array name="types">
@@ -33,4 +36,6 @@
         <item>busywork</item>
 
     </string-array>
+
+
 </resources>

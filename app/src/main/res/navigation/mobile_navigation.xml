@@ -3,19 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_home"
+    tools:ignore="UnusedNavigation">
 
     <fragment
         android:id="@+id/navigation_home"
         android:name="kg.geektech.todo.presenter.home.HomeFragment"
         android:label="@string/home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_favorites"
         android:name="kg.geektech.todo.presenter.favorites.FavoritesFragment"
         android:label="@string/favorites"
-        tools:layout="@layout/fragment_favorites" />
+        tools:layout="@layout/fragment_favorites" >
+
+    </fragment>
+
 
 
 </navigation>

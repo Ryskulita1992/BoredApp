@@ -1,9 +1,7 @@
-package kg.geektech.todo.data.database;
+package kg.geektech.todo.data.data;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-
-import java.security.PublicKey;
 
 public class AppPreferences {
     private SharedPreferences preferences;
@@ -17,22 +15,16 @@ public class AppPreferences {
 
     }
     public boolean isFirstLaunched(){
-     return preferences.getBoolean( PREF_IS_FIRST_LAUNCH , false);
+     return preferences.getBoolean( PREF_IS_FIRST_LAUNCH , true);
     }
 
-    public void setLaunched(Boolean bool) {
-        preferences.edit().putBoolean( PREF_IS_FIRST_LAUNCH, bool).apply();
-
-    }
-
-    public void nightMode(Boolean nightMode) {
-        preferences.edit().putBoolean( KEY_NIGHT_MODE, nightMode).apply();
+    public void setLaunched() {
+        preferences.edit().putBoolean( PREF_IS_FIRST_LAUNCH, false).apply();
 
     }
 
-    public boolean isNightModeSelected(){
-        return preferences.getBoolean( KEY_NIGHT_MODE , true);
-    }
+
+
 
 }
 

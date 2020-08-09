@@ -4,10 +4,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".presenter.main.MainActivity">
+    tools:context=".presenter.MainActivity">
 
 
+    <kg.geektech.todo.presenter.favorites.ViewPagerScrollEnable
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/view_pager_bottom"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintRight_toRightOf="parent"
 
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorLilac"
+        app:itemIconTint="@color/colorWhite"
+        app:itemTextColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_navigation_menu"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

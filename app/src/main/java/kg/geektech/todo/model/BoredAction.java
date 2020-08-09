@@ -1,34 +1,51 @@
 package kg.geektech.todo.model;
-
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 import com.google.gson.annotations.SerializedName;
+
+
+
+@Entity (tableName = "bored_action")
 public  class BoredAction{
+    @SerializedName("key")
+    @PrimaryKey
+    @NonNull
+    @ColumnInfo(name = "unique_key")
+    private String key;
 
     @SerializedName("activity")
+    @ColumnInfo(name = "activity")
     private String activity;
 
     @SerializedName("type")
+    @ColumnInfo(name = "type")
     private String type;
 
-    @SerializedName("key")
-    private String key;
 
     @SerializedName("participants")
+    @ColumnInfo(name = "participants")
     private Integer participants;
 
     @SerializedName("price")
+    @ColumnInfo(name = "price")
     private Float price;
 
     @SerializedName("accessibility")
+    @ColumnInfo(name = "accessibility")
     private Float accessibility;
 
 
 
-    public BoredAction(String activity, String type, String key, Integer participants, Double price, String link, Float accessibility, Double minAccessibility, Double maxAccessibility, Double minPrice, Double maxPrice) {
+    public BoredAction(String activity, String type, String key, Integer participants, Float price,  Float accessibility) {
         this.activity = activity;
         this.type = type;
         this.key = key;
         this.participants = participants;
         this.accessibility = accessibility;
+        this.price=price;
+
 
     }
 
@@ -82,8 +99,13 @@ public  class BoredAction{
 
     @Override
     public  String toString(){
-        return  "BoredAction{" + "key=" +key + ",activity=" + activity +",type=" + ",participants=" +participants+
-                ",price=" +price + ",link="  +",accessibility="+accessibility  +"}";
+        return  "BoredAction{"
+                + "key=" +key +
+                ",activity=" + activity
+                +",type=" +type +
+                ",participants=" +participants+
+                ",price=" +price + ","
+                +",accessibility="+accessibility  +"}";
 
     }
 }

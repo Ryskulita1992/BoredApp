@@ -1,0 +1,187 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    tools:context=".presenter.home.HomeFragment">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:cardBackgroundColor="@color/colorLilac"
+            app:cardCornerRadius="32dp"
+            app:layout_constraintTop_toTopOf="parent" />
+    </FrameLayout>
+
+    <com.like.LikeButton
+        android:id="@+id/likeButton2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        app:icon_size="15dp"
+        app:icon_type="heart"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:liked="true"
+        app:layout_goneMarginTop="40dp" />
+
+    <TextView
+        android:id="@+id/textViewCategory"
+        style="@style/CategoryStyle"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="100dp"
+        android:text="@string/category"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewExplore"
+        style="@style/TextViewStyle"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/explore"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCategory" />
+
+    <TextView
+        android:id="@+id/textViewPayment"
+        style="@style/TextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/paymentType"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewExplore" />
+
+    <TextView
+        android:id="@+id/textViewPrice"
+        style="@style/TextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/price"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewPayment" />
+
+    <ImageView
+        android:id="@+id/money_bag"
+        android:layout_width="35dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="140dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/ic_money_bag"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewExplore" />
+
+    <TextView
+        android:id="@+id/textViewParticipants"
+        style="@style/TextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/participants"
+        android:textSize="10sp"
+        app:layout_constraintRight_toLeftOf="@+id/textViewAccessibility"
+        app:layout_constraintTop_toBottomOf="@+id/textViewExplore"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="45dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewAccessibility"
+        style="@style/TextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="150dp"
+        android:text="@string/accessibility"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/likeButton2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_goneMarginLeft="20dp" />
+
+
+    <ImageView
+        android:id="@+id/ic_person"
+        style="@style/BothWrapContent"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/ic_one_user"
+        app:layout_constraintLeft_toLeftOf="@+id/textViewPayment"
+        app:layout_constraintTop_toBottomOf="@+id/textViewExplore" />
+
+    <ImageView
+        android:id="@+id/ic_two_person"
+        style="@style/BothWrapContent"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/ic_two_users"
+        app:layout_constraintLeft_toRightOf="@+id/ic_person"
+        app:layout_constraintTop_toBottomOf="@+id/textViewExplore" />
+
+    <ImageView
+        android:id="@+id/ic_three_persons"
+        style="@style/BothWrapContent"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/ic_three_persons"
+        app:layout_constraintLeft_toRightOf="@+id/ic_two_person"
+        app:layout_constraintTop_toBottomOf="@+id/textViewExplore" />
+
+    <ImageView
+        android:id="@+id/replace_icons"
+        style="@style/BothWrapContent"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="70dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/ic_three_persons"
+        android:visibility="invisible"
+        app:layout_constraintRight_toLeftOf="@+id/progress_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/textViewExplore" />
+
+    <ImageView
+        android:id="@+id/ic_four_persons"
+        style="@style/BothWrapContent"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/ic_four_persons"
+        app:layout_constraintLeft_toRightOf="@+id/ic_three_persons"
+        app:layout_constraintTop_toBottomOf="@+id/textViewExplore" />
+
+    <ProgressBar
+        android:id="@+id/progress_horizontal"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="80dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
+        android:max="100"
+        android:progressDrawable="@drawable/progressbar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewExplore" />
+</androidx.constraintlayout.widget.ConstraintLayout>
