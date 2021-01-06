@@ -1,4 +1,4 @@
- The main purposes of this project to create an App where will be realized Retrofit and deserialize json object into java objects. 
+ The main purpose of this project is to create an App where will be realized Retrofit and deserialize json object into java objects. 
  The benefits  i have learned and practiced  how retrofit & Api  works , how to make request, receive and show it in the end as well as improved knowledge in "Shared Prefference" , "Singltone", ""Callbacks" and "Room" from the poin of architecture view. 
 #Dependencies: 
 implementation 'com.github.jd-alexander:LikeButton:0.2.3' - for like button within animation 
